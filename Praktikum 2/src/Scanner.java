@@ -7,7 +7,24 @@ public class Scanner {
     static int col;
 
     private static void readName(Token t) {
-
+        t.kind = Token.IDENT;
+        t.str = "";
+        int state = 0;
+        for (; ; ) {
+            // keep the switch statement maybe for the future?
+            switch (state) {
+                case 0:
+                    if (ch >= 'A' && ch <= 'z') {
+                        t.str += ch;
+                        nextCh();
+                    } else {
+                        state = 1;
+                    }
+                    break;
+                case 1:
+                    return;
+            }
+        }
     }
 
     private static void readNumber(Token t) {
