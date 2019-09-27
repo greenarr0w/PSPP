@@ -5,6 +5,17 @@
 
 class Calculator {
 
+    static double stack[] = new double[10];
+    static int sp = 0;
+
+    static void push(double val) {
+        stack[sp++] = val;
+    }
+
+    static double pop() {
+        return stack[--sp];
+    }
+
     static void expr() throws Exception {
         term();
         while (Scanner.la == Token.PLUS
@@ -12,6 +23,11 @@ class Calculator {
             Scanner.scan();
             int op = Scanner.token.kind;
             term();
+            if (op == Token.PLUS) {
+                push(pop() + pop());
+            } else {
+                push(-pop() + pop());
+            }
         }
     }
 
@@ -31,15 +47,17 @@ class Calculator {
             Scanner.check(Token.RBRACK);
         } else if (Scanner.la == Token.NUMBER) {
             Scanner.scan();
+            push(Scanner.token.val);
         }
     }
 
 
     public static void main(String[] args) throws Exception {
-        Scanner.init("3+2-4");
+        Scanner.init("3.4+2-4-1.4+5+3.1"); // result 8.1
         Scanner.scan();
         expr();
-        //System.out.println("result="+pop());
+        System.out.println("result=" + pop());
     }
+
 
 }
