@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Randomgenerator:jar">
+    <output-path>$PROJECT_DIR$/Praktikum 7/Praktikum/lib/</output-path>
+    <root id="archive" name="Randomgenerator.jar">
+      <element id="module-output" name="Randomgenerator" />
+    </root>
+  </artifact>
+</component>

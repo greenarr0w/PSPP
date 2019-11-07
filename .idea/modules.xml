@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PSPP.iml" filepath="$PROJECT_DIR$/.idea/PSPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Praktikum 7/Praktikum/Praktikum.iml" filepath="$PROJECT_DIR$/Praktikum 7/Praktikum/Praktikum.iml" />
       <module fileurl="file://$PROJECT_DIR$/Praktikum 4/Praktikum 4.iml" filepath="$PROJECT_DIR$/Praktikum 4/Praktikum 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Praktikum 7/Praktikum 7.iml" filepath="$PROJECT_DIR$/Praktikum 7/Praktikum 7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Praktikum 7/Randomgenerator/Randomgenerator.iml" filepath="$PROJECT_DIR$/Praktikum 7/Randomgenerator/Randomgenerator.iml" />
     </modules>
   </component>
 </project>
